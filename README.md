@@ -1,10 +1,6 @@
 # ihave.diabetes.forsale
   [Buy my diabetes](https://ihave.diabetes.forsale)
 
-Create a blog with Astro and deploy it on --Cloudflare-- Workers as a [static website](https://developers.cloudflare.com/workers/static-assets/).
-
-<!-- dash-content-end -->
-
 ## 🚀 Project Structure
 
 Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
