@@ -1,3 +1,10 @@
+---
+title: "Disability Grief"
+description: "Being disabled sucks"
+pubDate: "Jun 19 2025"
+heroImage: "/blog-placeholder-2.jpg"
+---
+
 # Disability grief and sight seekers
 
 I find myself resenting friends/family that are more able than I:
