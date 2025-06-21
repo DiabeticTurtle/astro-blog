@@ -13,5 +13,11 @@ export default defineConfig({
     platformProxy: {
       enabled: true,
     },
+    workerEntryPoint: {
+      path: 'src/worker.ts',
+      namedExports: ['MyDurableObject']
+    },
   }),
+  experimental: {
+    liveContentCollections: true,
 });
