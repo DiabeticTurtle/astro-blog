@@ -4,45 +4,45 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-const handleSubmit = async (event) => {
-  event.preventDefault();
-  const form = event.target;
-  const data = {
-    title: form.title.value,
-    content: form.content.value,
-  };
-  await fetch('/api/new-post', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data),
-  });
-  alert('Post submitted!');
-  form.reset();
-};
 ---
-
-
 <!doctype html>
 <html lang="en">
 <head>
-	<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 </head>
 <body>
-    <Header />
-    <h1>Create a New Post</h1>
-    <form onsubmit="handleSubmit()">
-      <label>
-        Title:
-        <input type="text" name="title" required />
-      </label>
-      <br />
-      <label>
-        Content:
-        <textarea name="content" required></textarea>
-      </label>
-      <br />
-      <button type="submit">Submit Post</button>
-    </form>
-    <Footer />
-  </body>
+  <Header />
+  <h1>Create a New Post</h1>
+  <form id="new-post-form">
+    <label>
+      Title:
+      <input type="text" name="title" required />
+    </label>
+    <br />
+    <label>
+      Content:
+      <textarea name="content" required></textarea>
+    </label>
+    <br />
+    <button type="submit">Submit Post</button>
+  </form>
+  <Footer />
+  <script type="module">
+    document.getElementById('new-post-form').addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const form = event.target;
+      const data = {
+        title: form.title.value,
+        content: form.content.value,
+      };
+      await fetch('/api/new-post', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      alert('Post submitted!');
+      form.reset();
+    });
+  </script>
+</body>
 </html>
