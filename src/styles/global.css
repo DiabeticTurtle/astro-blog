@@ -32,7 +32,7 @@
 }
 @font-face{
   font-family: "0xProto-Regular";
-  src: url("/fonts/0xProto-Regular.tff") format("tff")
+  src: url("/fonts/0xProto-Regular.tff") format("tff");
   font-weight: 700;
   font-style: normal;
 }
