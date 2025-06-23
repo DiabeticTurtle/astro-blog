@@ -30,8 +30,14 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face{
+  font-family: "0xProto-Regular";
+  src: url("/fonts/0xProto-Regular.tff") format("tff")
+  font-weight: 700;
+  font-style: normal;
+}
 body {
-  font-family: "Atkinson", sans-serif;
+  font-family: "0xProto-Regular";
   margin: 0;
   padding: 0;
   text-align: left;
