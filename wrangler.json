@@ -10,8 +10,5 @@
   "observability": {
     "enabled": true
   },
-  "upload_source_maps": true,
-  "kv_namespaces": [
-    { "binding": "POSTS", "id": "your_kv_namespace_id" }
-  ]
+  "upload_source_maps": true
 }
