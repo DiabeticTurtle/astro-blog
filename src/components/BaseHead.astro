@@ -45,3 +45,19 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+<script type="module">
+  const fonts = [
+    '"0xProto-Regular", monospace',
+    '"Atkinson", sans-serif'
+  ];
+  let current = 0;
+  const btn = document.getElementById('font-switcher');
+  btn.addEventListener('click', () => {
+    current = (current + 1) % fonts.length;
+    document.body.style.fontFamily = fonts[current];
+    btn.textContent = `Switch Font (${fonts[current].replace(/["']/g, '').split(',')[0]})`;
+  });
+  // Optional: Show current font on load
+  btn.textContent = `Switch Font (${fonts[current].replace(/["']/g, '').split(',')[0]})`;
+</script>
