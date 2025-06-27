@@ -167,3 +167,34 @@ hr {
   /* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
   white-space: nowrap;
 }
+
+body.light-mode {
+  --accent: #121014;
+  --accent-dark: #7c7e7e;
+  --black: #fafcfd;
+  --gray: 96, 115, 159;
+  --gray-light: 229, 233, 240;
+  background: #fafcfd;
+  color: #121014;
+}
+
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode h4,
+body.light-mode h5,
+body.light-mode h6 {
+  color: #121014;
+}
+
+body.light-mode p {
+  color: #121014;
+}
+
+body.light-mode a {
+  color: var(--accent);
+}
+
+body.light-mode a:hover {
+  color: var(--accent-dark);
+}

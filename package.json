@@ -18,6 +18,10 @@
     "@astrojs/mdx": "4.2.4",
     "@astrojs/rss": "4.0.11",
     "@astrojs/sitemap": "3.3.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^7.1.2",
+    "@mui/material": "^7.1.2",
     "astro": "5.7.4",
     "typescript": "5.8.3"
   },
